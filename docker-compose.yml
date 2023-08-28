@@ -2,9 +2,9 @@ version: "3.7"
 services:
   node:
     container_name: subspace-node
-    image: ghcr.io/subspace/node:gemini-3f-2023-aug-25-2
+    image: ghcr.io/subspace/node:gemini-3f-2023-aug-25-2 #gemini-3f-2023-aug-25-2 thay đổi phiên bản snapshot thành bản mới nếu có
     volumes:
-      - "D://sub:/var/subspace:rw"
+      - "D://sub:/var/subspace:rw" # đường dẫn lưu Data
     ports:
       - "0.0.0.0:30333:30333"
       - "0.0.0.0:30433:30433"
@@ -26,7 +26,7 @@ services:
       "--prometheus-external",
       "--prometheus-port", "9615",
       "--validator",
-      "--name", "MFLow-VN"
+      "--name", "Nhập tên node của bạn" # tên Node
     ]
     healthcheck:
       timeout: 5s
@@ -40,27 +40,19 @@ services:
         condition: service_healthy
     image: ghcr.io/subspace/farmer:gemini-3f-2023-aug-25-2
     volumes:       
-        - "E:\\:/media/subspace-e:rw"
-        - "F:\\:/media/subspace-f:rw"  
-        - "G:\\:/media/subspace-g:rw" 
-        - "H:\\:/media/subspace-h:rw"
-        - "I:\\:/media/subspace-i:rw" 
-        - "J:\\:/media/subspace-j:rw"       
+        - "E:\\:/media/subspace-e:rw" # đường dẫn lưu file plot
+        - "F:\\:/media/subspace-f:rw"           
     ports:
         - "0.0.0.0:30533:30533"
     restart: unless-stopped
     command: 
      [
       "farm",       
-      "path=/media/subspace-e,size=1000G",      
-      "path=/media/subspace-f,size=250G",
-      "path=/media/subspace-g,size=130G",
-      "path=/media/subspace-h,size=130G",
-      "path=/media/subspace-i,size=120G",
-      "path=/media/subspace-j,size=120G",    
+      "path=/media/subspace-e,size=1000G", # thay đổi dung lượng plot     
+      "path=/media/subspace-f,size=250G",      
       "--node-rpc-url", "ws://node:9944",
       "--listen-on", "/ip4/0.0.0.0/tcp/30533",
-      "--reward-address", "stBLGaJnXwVyX99DfnD6pL38SibizreQTyy3uvd6f5DvApCHt"      
+      "--reward-address", "thay đổi địa chỉ ví của bạn"      
      ]
      
   grafana:
