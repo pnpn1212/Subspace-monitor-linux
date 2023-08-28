@@ -67,5 +67,10 @@ Thông tin đăng nhập Grafana
 user: admin
 pass: MFL123123
 ```
+Ảnh minh họa
 
-MFLow - MFL VNBnodes
+![image](https://github.com/pnpn1212/Subspace-monitor-linux/assets/76662222/cb17be13-2e60-4a98-a978-8d5e631dcd9a)
+![image](https://github.com/pnpn1212/Subspace-monitor-linux/assets/76662222/977ef134-b3b5-458e-a4f6-5e7e3ba1a562)
+![image](https://github.com/pnpn1212/Subspace-monitor-linux/assets/76662222/ac7b4031-42ec-4e99-9b22-85f8d5a69e5a)
+
+Bản quyền của MFLow - MFL VNBnodes
