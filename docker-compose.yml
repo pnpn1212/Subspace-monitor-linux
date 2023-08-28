@@ -2,9 +2,9 @@ version: "3.7"
 services:
   node:
     container_name: subspace-node
-    image: ghcr.io/subspace/node:gemini-3f-2023-aug-25-2 #gemini-3f-2023-aug-25-2 thay d?i phiên b?n snapshot thành b?n m?i n?u có
+    image: ghcr.io/subspace/node:gemini-3f-2023-aug-25-2 #gemini-3f-2023-aug-25-2 thay doi phiÃªn ban snapshot thÃ nh ban moi neu cÃ³
     volumes:
-      - "D://sub:/var/subspace:rw" # du?ng d?n luu Data
+      - "D://sub:/var/subspace:rw" # duong dan luu Data
     ports:
       - "0.0.0.0:30333:30333"
       - "0.0.0.0:30433:30433"
@@ -26,7 +26,7 @@ services:
       "--prometheus-external",
       "--prometheus-port", "9615",
       "--validator",
-      "--name", "nh?p tên Node c?a b?n" # tên Node
+      "--name", "nhap ten node cua ban" # tÃªn Node
     ]
     healthcheck:
       timeout: 5s
@@ -38,9 +38,9 @@ services:
     depends_on:
       node:
         condition: service_healthy
-    image: ghcr.io/subspace/farmer:gemini-3f-2023-aug-25-2 #gemini-3f-2023-aug-25-2 thay d?i phiên b?n snapshot thành b?n m?i n?u có
+    image: ghcr.io/subspace/farmer:gemini-3f-2023-aug-25-2 #gemini-3f-2023-aug-25-2 thay doi phiÃªn ban snapshot thÃ nh ban moi neu cÃ³
     volumes:       
-        - "E:\\:/media/subspace-e:rw" #d?i v? trí luu file plot ? dây
+        - "E:\\:/media/subspace-e:rw" #doi vi tri luu file plot o dÃ¢y
         - "F:\\:/media/subspace-f:rw"        
     ports:
         - "0.0.0.0:30533:30533"
@@ -48,11 +48,11 @@ services:
     command: 
      [
       "farm",       
-      "path=/media/subspace-e,size=1000G", #d?i d?ng lu?ng c?n plot       
+      "path=/media/subspace-e,size=1000G", # thay doi dung luong can plot       
       "path=/media/subspace-f,size=250G",          
       "--node-rpc-url", "ws://node:9944",
       "--listen-on", "/ip4/0.0.0.0/tcp/30533",
-      "--reward-address", "nh?p d?a ch? ví c?a b?n"      
+      "--reward-address", "nhap dia chi vi cua ban"      
      ]
      
   grafana:
@@ -62,9 +62,9 @@ services:
       - grafana_data:/var/lib/grafana
       - ./grafana/provisioning:/etc/grafana/provisioning
     environment:
-      - GF_SECURITY_ADMIN_USER=ADMIN #dây là user login vào grafana
-      - GF_SECURITY_ADMIN_PASSWORD=MFL123123 # dây là pass login vào grafana
-      - GF_USERS_ALLOW_SIGN_UP=false #link truy c?p grafana monitor localhost:3000
+      - GF_SECURITY_ADMIN_USER=ADMIN #dÃ¢y lÃ  user login vÃ o grafana
+      - GF_SECURITY_ADMIN_PASSWORD=MFL123123 # dÃ¢y lÃ  pass login vÃ o grafana
+      - GF_USERS_ALLOW_SIGN_UP=false #link truy cap grafana monitor localhost:3000
       - GF_SECURITY_DISABLE_BRUTE_FORCE_LOGIN_PROTECTION=false
     restart: unless-stopped
     ports:
