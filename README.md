@@ -22,4 +22,10 @@ Truy cập Grafana
 localhost:3000
 ```
 
+Thông tin đăng nhập Grafana
+```
+user: admin
+pass: MFL123123
+```
+
 MFLow - MFL VNBnodes
