@@ -31,7 +31,7 @@ sudo apt-get update
 ```
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugi
 ```
-# Subspace Guide cài đặt
+# Subspace Guide cài đặt (dành cho docker trên linux)
 1/
 Sửa đổi tên Node, địa chỉ ví, đường dẫn lưu file, đường dẫn plot, dung lượng cần plot
 ```
