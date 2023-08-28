@@ -48,7 +48,7 @@ docker compose up -d
 ```
 Nếu không chạy được thì dùng 
 ```
-docker-compose up -d để cài đặt
+docker-compose up -d
 ```
 3/
 Truy cập Grafana
