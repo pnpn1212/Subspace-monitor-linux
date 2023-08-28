@@ -12,7 +12,7 @@ Bắt đầu cài đặt
 ```
 docker compose up -d
 ```
-nếu không chạy được thì dùng 
+Nếu không chạy được thì dùng 
 ```
 docker-compose up -d để cài đặt
 ```
