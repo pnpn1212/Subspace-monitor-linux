@@ -4,7 +4,7 @@ services:
     container_name: subspace-node
     image: ghcr.io/subspace/node:gemini-3f-2023-aug-25-2 #gemini-3f-2023-aug-25-2 thay doi phiên ban snapshot thành ban moi neu có
     volumes:
-      - "D://sub:/var/subspace:rw" # duong dan luu Data
+      - "/root/sub:/var/subspace:rw" # duong dan luu Data
     ports:
       - "0.0.0.0:30333:30333"
       - "0.0.0.0:30433:30433"
@@ -40,16 +40,16 @@ services:
         condition: service_healthy
     image: ghcr.io/subspace/farmer:gemini-3f-2023-aug-25-2 #gemini-3f-2023-aug-25-2 thay doi phiên ban snapshot thành ban moi neu có
     volumes:       
-        - "E:\\:/media/subspace-e:rw" #doi vi tri luu file plot o dây
-        - "F:\\:/media/subspace-f:rw"        
+        - "\\root\\plot\\:/media/subspace-plot:rw" #doi vi tri luu file plot o dây
+        - "\\root\\plot1\\:/media/subspace-plot1:rw"        
     ports:
         - "0.0.0.0:30533:30533"
     restart: unless-stopped
     command: 
      [
       "farm",       
-      "path=/media/subspace-e,size=1000G", # thay doi dung luong can plot       
-      "path=/media/subspace-f,size=250G",          
+      "path=/media/subspace-plot,size=100G", # thay doi dung luong can plot       
+      "path=/media/subspace-plot1,size=25G",          
       "--node-rpc-url", "ws://node:9944",
       "--listen-on", "/ip4/0.0.0.0/tcp/30533",
       "--reward-address", "nhap dia chi vi cua ban"      
