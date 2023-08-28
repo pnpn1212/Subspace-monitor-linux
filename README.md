@@ -32,14 +32,20 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugi
 ```
 # Subspace Guide cài đặt (dành cho docker trên linux)
-1/
+1/ Tải thư mục Subspace về
+```
+git clone https://github.com/pnpn1212/Subspace-monitor-linux.git
+```
+```
+cd subspace-monitor-linux
+```
 Sửa đổi tên Node, địa chỉ ví, đường dẫn lưu file, đường dẫn plot, dung lượng cần plot
 ```
 nano docker-compose.yml 
 ```
 Lưu lại sau khi nano
 ```
-Ctrl + X + Y 
+Ctrl + X + Y + enter
 ```
 2/
 Bắt đầu cài đặt
