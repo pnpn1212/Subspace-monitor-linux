@@ -17,4 +17,9 @@ Nếu không chạy được thì dùng
 docker-compose up -d để cài đặt
 ```
 
+Truy cập Grafana
+```
+localhost:3000
+```
+
 MFLow - MFL VNBnodes
