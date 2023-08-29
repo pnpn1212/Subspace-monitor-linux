@@ -47,6 +47,11 @@ Lưu lại sau khi nano
 ```
 Ctrl + X + Y + enter
 ```
+```
+chmod 777 /root/Subspace-monitor-linux
+chmod 777 /root/Subspace-monitor-linux/chains
+chmod 777 /root/plot
+```
 2/
 Bắt đầu cài đặt
 ```
@@ -55,11 +60,6 @@ docker compose up -d
 Nếu không chạy được thì dùng 
 ```
 docker-compose up -d
-```
-```
-chmod 777 /root/Subspace-monitor-linux
-chmod 777 /root/Subspace-monitor-linux/chains
-chmod 777 /root/plot
 ```
 3/Truy cập Grafana
 - Nếu là VPS thì thay localhost bằng địa chỉ IP
