@@ -29,7 +29,7 @@ sudo apt-get update
 ```
 4/ Cài docker
 ```
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugi
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 # Setup (dành cho docker trên linux)
 1/ Tải thư mục Subspace về
