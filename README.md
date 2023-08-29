@@ -57,7 +57,7 @@ Nếu không chạy được thì dùng
 docker-compose up -d
 ```
 3/Truy cập Grafana
-Nếu là VPS thì thay localhost bằng địa chỉ IP
+- Nếu là VPS thì thay localhost bằng địa chỉ IP
 ```
 localhost:3000
 ```
