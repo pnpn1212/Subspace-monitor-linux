@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
     command: [
       "--chain", "gemini-3f",
-      "--base-path", "var/subspace",
+      "--base-path", "/var/subspace",
       "--execution", "wasm",
       "--blocks-pruning", "256",
       "--state-pruning", "archive",
