@@ -37,10 +37,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 git clone https://github.com/pnpn1212/Subspace-monitor-linux.git
 ```
 ```
-chmod 777 /root/Subspace-monitor-linux
-chmod 777 /root/plot
-```
-```
 cd Subspace-monitor-linux
 ```
 Sửa đổi tên Node, địa chỉ ví, đường dẫn lưu file, đường dẫn plot, dung lượng cần plot
@@ -59,6 +55,11 @@ docker compose up -d
 Nếu không chạy được thì dùng 
 ```
 docker-compose up -d
+```
+```
+chmod 777 /root/Subspace-monitor-linux
+chmod 777 /root/Subspace-monitor-linux/chains
+chmod 777 /root/plot
 ```
 3/Truy cập Grafana
 - Nếu là VPS thì thay localhost bằng địa chỉ IP
