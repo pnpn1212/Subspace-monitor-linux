@@ -37,6 +37,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 git clone https://github.com/pnpn1212/Subspace-monitor-linux.git
 ```
 ```
+chmod 777 /root/Subspace-monitor-linux
+```
+```
 cd Subspace-monitor-linux
 ```
 Sửa đổi tên Node, địa chỉ ví, đường dẫn lưu file, đường dẫn plot, dung lượng cần plot
