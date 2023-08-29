@@ -64,7 +64,12 @@ Nếu không chạy được thì dùng
 ```
 docker-compose up -d
 ```
-3/Truy cập Grafana
+3/ Lệnh check Log
+```
+docker logs -f subspace-node
+docker logs -f subspace-farmer
+```
+4/Truy cập Grafana
 - Nếu là VPS thì thay localhost bằng địa chỉ IP
 ```
 localhost:3000
