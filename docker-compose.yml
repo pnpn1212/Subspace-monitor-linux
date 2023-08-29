@@ -4,7 +4,7 @@ services:
     container_name: subspace-node
     image: ghcr.io/subspace/node:gemini-3f-2023-aug-25-2 #gemini-3f-2023-aug-25-2 thay doi phiên ban snapshot thành ban moi neu có
     volumes:
-      - "/root/Subspace-monitor-linux:/var/subspace:rw" # duong dan luu Data
+      - "/root/Subspace-monitor-linux:/var/subspace:rw" #duong dan luu Data
     ports:
       - "0.0.0.0:30333:30333"
       - "0.0.0.0:30433:30433"
@@ -26,7 +26,7 @@ services:
       "--prometheus-external",
       "--prometheus-port", "9615",
       "--validator",
-      "--name", "nhap ten node cua ban" # tên Node
+      "--name", "nhap ten node cua ban"
     ]
     healthcheck:
       timeout: 5s
@@ -48,7 +48,7 @@ services:
     command: 
      [
       "farm",       
-      "path=/media/subspace-plot,size=100G", # thay doi dung luong can plot       
+      "path=/media/subspace-plot,size=100G", #thay doi dung luong can plot       
       "path=/media/subspace-plot1,size=25G",          
       "--node-rpc-url", "ws://node:9944",
       "--listen-on", "/ip4/0.0.0.0/tcp/30533",
