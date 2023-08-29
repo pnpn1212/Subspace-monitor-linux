@@ -38,6 +38,7 @@ git clone https://github.com/pnpn1212/Subspace-monitor-linux.git
 ```
 ```
 chmod 777 /root/Subspace-monitor-linux
+chmod 777 /root/plot
 ```
 ```
 cd Subspace-monitor-linux
