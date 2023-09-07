@@ -40,8 +40,8 @@ services:
         condition: service_healthy
     image: ghcr.io/subspace/farmer:gemini-3f-2023-sep-05 # thay doi phiên ban snapshot thành ban moi neu có
     volumes:       
-        - "/root/plot/:/media/subspace-plot:rw" #doi vi tri luu file plot o dây
-      #  - "/root/plot1/:/media/subspace-plot1:rw"        
+        - "\root\plot\:/media/subspace-plot:rw" #doi vi tri luu file plot o dây
+      #  - "\root\plot1\:/media/subspace-plot1:rw"        
     ports:
         - "0.0.0.0:30533:30533"
     restart: unless-stopped
